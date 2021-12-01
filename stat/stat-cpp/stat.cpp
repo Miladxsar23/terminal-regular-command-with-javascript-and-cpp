@@ -1,12 +1,13 @@
 #include <iostream>
 #include <sys/stat.h>
-
+#include "./checktype.h"
 using namespace std;
 
 int main(int argc, char** argv) {
 	struct stat stbuf;
 	if( stat(argv[1], &stbuf) == 0 ) {
-		cout << argv[1]<< endl;
+		string type = typeOfFile(stbuf.st_mode);
+		cout << argv[1]<< " " << type << endl;
 		cout << "dev : " << stbuf.st_dev << endl;
 		cout << "inumber : " << stbuf.st_ino << endl;
 		cout << "mode : " << stbuf.st_mode << endl;
