@@ -9,8 +9,7 @@ int main(int argc, char** argv) {
         uid_t u = stoi(argv[3]);
 
         if(chown(argv[1], u, g) == 0 ){
-                cout << "ownership of file " << argv[1] << " is changed!" << endd
-l;
+                cout << "ownership of file " << argv[1] << " is changed!" << endl;
         }else {
                 cout << "something wrong" << endl;
         }
