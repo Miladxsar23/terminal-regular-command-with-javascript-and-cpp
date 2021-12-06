@@ -5,7 +5,7 @@ async function getPerm(filePath) {
         let perm = [];
         try {
                 let {mode} = await stat(filePath);
-				if(!constants.S_IRUSR) throw "just work in unix systems";
+		if(!constants.S_IRUSR) throw "just work in unix systems";
                 (mode & constants.S_IRUSR) ? perm.push('r') : perm.push('-');
                 (mode & constants.S_IWUSR) ? perm.push('w') : perm.push('-');
                 (mode & constants.S_IXUSR) ? perm.push('x') : perm.push('-');
