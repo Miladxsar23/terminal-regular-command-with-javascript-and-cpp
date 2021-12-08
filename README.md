@@ -8,9 +8,10 @@ I have decided to run all the Linux terminal commands in JavaScript and c++, so 
 # Usage 
 command | Description | js example | c++ example 
 --- | --- | --- | --- |
-stat <fileName> | These functions return information about a file(from inode) | node stat.js exampleFile.txt | ./stat.exe exampleFile.txt
-chown <fileName> <uid> <gid>  | change ownership of files | node chown.js exampleFile.txt 2001 2001 | ./chwon.exe exampleFile.txt 2001 2001 (just unix systems)
-permission <filePath> | get file permissions | node permission.js exampleFile.txt (jsut unix system)| ./permission.exe exampleFile.txt (just unix systems)
+stat "fileName" | These functions return information about a file(from inode) | node stat.js exampleFile.txt | ./stat.exe exampleFile.txt
+chown "fileName" "uid" "gid"  | change ownership of files | node chown.js exampleFile.txt 2001 2001 | ./chwon.exe exampleFile.txt 2001 2001 (just unix systems)
+permission "filePath" | get file permissions | node permission.js exampleFile.txt (jsut unix system)| ./permission.exe exampleFile.txt (just unix systems)
+chmod "filePath" "number like 755" | change mode or change permission of file in ACL | chmod.js exampleFile.txt 644 | ./chmod.exe exampleFile.txt 755
   
 ## Contributing
 As I use this for my own projects, I know this might not be the perfect approach
